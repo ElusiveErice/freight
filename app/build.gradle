@@ -53,4 +53,6 @@ dependencies {
 
     //XUI组件库
     implementation 'com.github.xuexiangjys:XUI:1.1.7'
+
+    implementation 'com.github.ihsg:PatternLocker:2.5.7'
 }
