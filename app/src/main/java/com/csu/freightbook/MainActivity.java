@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
 
     private List<Integer> mPatternLockerPassword;
     private PatternLockerView mPatternLockerView;
-    private RelativeLayout mRLRoot;
+    private int times = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +54,20 @@ public class MainActivity extends Activity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        mRLRoot = findViewById(R.id.rl_root);
-        mRLRoot.setOnClickListener(v -> initPermission());
+        RelativeLayout RLRoot = findViewById(R.id.rl_root);
+        RLRoot.setOnClickListener(v -> {
+            times++;
+            if (times == 20) {
+                times = 0;
+                initPatternLockerPassword();
+            } else {
+                if (initPatternLocker()) {
+                    makePatternLockerView();
+                } else {
+                    initPatternLockerPassword();
+                }
+            }
+        });
         initPermission();
     }
 
@@ -156,6 +168,7 @@ public class MainActivity extends Activity {
         if (requestCode == REQUEST_PATTERN_LOCKER_PASSWORD_CODE) {
             if (resultCode == SetPatternLockerPasswordActivity.PATTERN_LOCKER_PASSWORD_RESULT_CODE) {
                 String passwordString = data.getStringExtra(SetPatternLockerPasswordActivity.PASSWORD_EXTRA);
+                mPatternLockerPassword = new ArrayList<>();
                 for (char c : passwordString.toCharArray()) {
                     mPatternLockerPassword.add(c - 48);
                 }
