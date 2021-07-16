@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">运货账本</string>
     <string name="set_pattern_locker_password">设置图形锁密码</string>
+    <string name="write_bill">记账</string>
+    <string name="check_book">查账</string>
+    <string name="pooled_analysis">统计</string>
 </resources>

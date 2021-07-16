@@ -13,18 +13,22 @@
         app:tb_barHeight="65dp"
         app:tb_leftImageResource="@null"
         app:tb_sideTextPadding="20dp"
-        app:tb_titleText="@string/app_name" />
+        app:tb_titleText="@string/write_bill" />
 
     <FrameLayout
-        android:id="@+id/content"
+        android:id="@+id/fragment_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom"
+        android:layout_above="@+id/bottom_menu"
         android:layout_below="@+id/title_bar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom"
+        android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        app:itemTextColor="@drawable/bottom_navigation_item_selector"
+        app:itemIconTint="@drawable/bottom_navigation_item_selector"
+        app:menu="@menu/main_menu"/>
 </RelativeLayout>
