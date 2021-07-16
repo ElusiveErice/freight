@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">freightbook</string>
+    <string name="app_name">运货账本</string>
+    <string name="set_pattern_locker_password">设置图形锁密码</string>
 </resources>
