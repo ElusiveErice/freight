@@ -4,4 +4,22 @@
     <string name="write_bill">记账</string>
     <string name="check_book">查账</string>
     <string name="pooled_analysis">统计</string>
+    <string name="back">返回</string>
+    <string name="new_bill">新建账单</string>
+    <string name="departure">出发地</string>
+    <string name="destination">目的地</string>
+    <string name="date">日期</string>
+    <string name="week">星期</string>
+    <string name="good_name">货物名称</string>
+    <string name="please_select_good_name">请输入货物名称</string>
+    <string name="price">单价</string>
+    <string name="weight">重量</string>
+    <string name="total_price">总价</string>
+    <string name="oil_card">油卡</string>
+    <string name="submit">提交</string>
+    <string name="cancel">取消</string>
+    <string name="hint_please_input_good_type">请输入货物名称</string>
+    <string name="bill_info">账单信息</string>
+    <string name="rank_info">运趟信息</string>
+    <string name="maintenance_info">维修信息</string>
 </resources>

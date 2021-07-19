@@ -12,5 +12,8 @@
         <item name="android:windowBackground">@drawable/road</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-
+    <style name="CustomAnim">
+        <item name="android:windowEnterAnimation">@anim/custom_push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/custom_push_up_out</item>
+    </style>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:tb_actionPadding="20dp"
+        app:tb_barHeight="65dp"
+        app:tb_leftImageResource="@null"
+        app:tb_sideTextPadding="20dp"
+        app:tb_titleText="@string/new_bill" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_new_bill"
+        android:layout_below="@+id/title_bar" />
+
+    <com.xuexiang.xui.widget.button.shadowbutton.ShadowButton
+        android:id="@+id/bt_new_bill"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_new_bill"
+        app:sb_radius="6dp" />
+
+</RelativeLayout>

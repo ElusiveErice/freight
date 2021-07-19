@@ -23,7 +23,6 @@ public class HomepageActivity extends XUIActivity {
         return intent;
     }
 
-    private TitleBar mTitleBar;
     private BottomNavigationView mBottomMenu;
 
     private FragmentManager mFragmentManager;
@@ -34,7 +33,6 @@ public class HomepageActivity extends XUIActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        mTitleBar = findViewById(R.id.title_bar);
         mBottomMenu = findViewById(R.id.bottom_menu);
 
         mFragmentManager = getSupportFragmentManager();
@@ -49,13 +47,10 @@ public class HomepageActivity extends XUIActivity {
         mBottomMenu.setOnNavigationItemSelectedListener(menuItem -> {
             if (menuItem.getItemId() == R.id.item_write_bill) {
                 mFragment = WriteBillFragment.newInstance();
-                mTitleBar.setTitle(getString(R.string.write_bill));
             } else if (menuItem.getItemId() == R.id.item_check_book) {
                 mFragment = CheckBookFragment.newInstance();
-                mTitleBar.setTitle(getString(R.string.check_book));
             } else if (menuItem.getItemId() == R.id.item_pooled_analysis) {
                 mFragment = PooledAnalysisFragment.newInstance();
-                mTitleBar.setTitle(getString(R.string.pooled_analysis));
             }
 
             mFragmentManager.beginTransaction()

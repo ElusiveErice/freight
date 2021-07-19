@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.xuexiang.xui.widget.edittext.ValidatorEditText
+        android:id="@+id/input_good_name"
+        style="@style/EditText.Normal"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/good_name"
+        android:textSize="22sp"
+        app:vet_tipPosition="top" />
+</LinearLayout>

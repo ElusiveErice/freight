@@ -4,23 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.xuexiang.xui.widget.actionbar.TitleBar
-        android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        app:tb_actionPadding="20dp"
-        app:tb_barHeight="65dp"
-        app:tb_leftImageResource="@null"
-        app:tb_sideTextPadding="20dp"
-        app:tb_titleText="@string/write_bill" />
-
     <FrameLayout
         android:id="@+id/fragment_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_menu"
-        android:layout_below="@+id/title_bar" />
+        android:layout_alignParentTop="true" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_menu"
@@ -28,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/gray"
-        app:itemTextColor="@drawable/bottom_navigation_item_selector"
         app:itemIconTint="@drawable/bottom_navigation_item_selector"
-        app:menu="@menu/main_menu"/>
+        app:itemTextColor="@drawable/bottom_navigation_item_selector"
+        app:menu="@menu/main_menu" />
 </RelativeLayout>
